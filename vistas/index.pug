@@ -1,0 +1,107 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Productos Fakes
+    style.
+      .grilla {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        position: relative;
+      }
+      .producto {
+        position: relative;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        text-align: center;
+      }
+      .producto img {
+        max-width: 100%;
+        height: auto;
+      }
+      .btn-agregar {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+      .banda-oferta {
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        background: red;
+        color: white;
+        padding: 5px 10px;
+        transform: rotate(-45deg);
+        z-index: 1;
+      }
+      .precio-original {
+        text-decoration: line-through;
+        color: #888;
+      }
+      .carrito-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: black;
+        cursor: pointer;
+      }
+    script.
+      function agregarAlCarrito(productId) {
+        fetch(`/carrito/agregar/${productId}`, {
+          method: 'POST'
+        }).then(() => {
+          alert('Producto agregado al carrito');
+        }).catch((error) => {
+          console.error('Error:', error);
+        });
+      }
+body
+    h1 Productos Fakes
+    a.carrito-icon(href='/carrito') &#128722;
+    .grilla
+      each producto in productos
+        .producto
+          if producto.descuento
+            .banda-oferta Oferta
+          h5= producto.title
+          // Descripción abreviada visible por defecto
+          p.abreviada= producto.description.substr(0, 50) + '...'
+          // Contenedor para la descripción completa oculto por defecto
+          p.completa(style="display:none;")= producto.description
+          // Mostrar descripción completa al pasar el mouse por encima
+          script.
+            document.querySelector('.producto').addEventListener('mouseover', function(event) {
+              var target = event.target;
+              var completa = target.querySelector('.completa');
+              if (completa) {
+                completa.style.display = 'block';
+                target.querySelector('.abreviada').style.display = 'none';
+              }
+            });
+            document.querySelector('.producto').addEventListener('mouseout', function(event) {
+              var target = event.target;
+              var completa = target.querySelector('.completa');
+              if (completa) {
+                completa.style.display = 'none';
+                target.querySelector('.abreviada').style.display = 'block';
+              }
+            });
+          img(src= producto.image, width="200px")
+
+          if producto.descuento
+            h5 
+              span.precio-original $#{producto.price}
+              br
+              | Descuento: #{producto.descuento}%
+              br
+              | Monto Descontado: $#{(producto.price * producto.descuento / 100).toFixed(2)}
+              br
+              | Precio Final: $#{(producto.price * (1 - producto.descuento / 100)).toFixed(2)}
+          else
+            h5 $#{producto.price}
+          button.btn-agregar(type='button', onclick=`agregarAlCarrito(${producto.id})`) Agregar al Carrito

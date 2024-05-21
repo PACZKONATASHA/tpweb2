@@ -1,0 +1,20 @@
+{
+  "name": "ugd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Natasha Paczko",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "node-google-translate-skidz": "^1.1.2",
+    "nodemon": "^3.1.0",
+    "pug": "^3.0.2"
+  }
+}

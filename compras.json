@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "total": 500,
+        "productos": [
+            {
+                "id": 5,
+                "cantidad": 4,
+                "title": "Camisa",
+                "price": 100
+            },
+            {
+                "id": 7,
+                "cantidad": 2,
+                "title": "Pantalón",
+                "price": 50
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "total": 300,
+        "productos": [
+            {
+                "id": 6,
+                "cantidad": 1,
+                "title": "Buzo",
+                "price": 200
+            },
+            {
+                "id": 8,
+                "cantidad": 1,
+                "title": "Anillo",
+                "price": 1000
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "productos": [
+            {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 109.95,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                "rating": {
+                    "rate": 3.9,
+                    "count": 120
+                },
+                "cantidad": 1
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "productos": [
+            {
+                "id": 2,
+                "title": "Mens Casual Premium Slim Fit T-Shirts ",
+                "price": 22.3,
+                "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+                "rating": {
+                    "rate": 4.1,
+                    "count": 259
+                },
+                "cantidad": 1
+            },
+            {
+                "id": 3,
+                "title": "Mens Cotton Jacket",
+                "price": 55.99,
+                "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+                "rating": {
+                    "rate": 4.7,
+                    "count": 500
+                },
+                "cantidad": 1
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "productos": [
+            {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 109.95,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                "rating": {
+                    "rate": 3.9,
+                    "count": 120
+                },
+                "descuento": 30,
+                "cantidad": 1
+            },
+            {
+                "id": 3,
+                "title": "Mens Cotton Jacket",
+                "price": 55.99,
+                "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+                "rating": {
+                    "rate": 4.7,
+                    "count": 500
+                },
+                "cantidad": 1
+            }
+        ]
+    }
+]
